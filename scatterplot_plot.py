@@ -15,6 +15,9 @@ def prepare_scatterplot_df(df_status):
     sp_moyenne_ebike=('ebike','mean')
     ).round(2).reset_index()
 
+    ##
+    df_status['created_at'] = pd.to_datetime(df_status['created_at']).dt.tz_localize(None)
+
     sp_df['week_day']=sp_df['created_at'].dt.day_name()
     sp_df['hour'] = sp_df['created_at'].dt.hour + sp_df['created_at'].dt.minute / 60
 
