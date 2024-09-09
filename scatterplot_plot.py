@@ -29,7 +29,7 @@ def plot_scatterplot(sp_df):
             title='heure de la journée',
             tickmode='array',
             # tickvals=[i / 6 for i in range(0, 24 * 6 + 1, 1)],  # Ticks every 10 minutes
-            tickvals=[i / 2 for i in range(0, 24 * 2 + 1, 1)],  
+            tickvals=[i / 6 for i in range(0, 24 * 6 + 1, 1)],  # Ticks every 10 minutes
             ticktext=[f'{int(i // 6)}:{i % 6 * 10:02d}' for i in range(0, 24 * 6 + 1, 1)],  # Format HH:MM
             tickformat='%H:%M'
         ),
